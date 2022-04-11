@@ -4,11 +4,18 @@
 ![App Screenshot](https://github.com/Anup-Narkhede/Docker-Project-Mongo-Node-AWS-ECR-/blob/master/architecture.png)
 
 #### Pull Docker images from docker hub
-       ```docker pull mongo```
-       ```docker pull mongo-express```
+       ```
+       docker pull mongo
+       ```
+       
+       ```
+       docker pull mongo-express
+       ```
        
 #### List images
-```docker images```
+```
+docker images
+```
 
 #### Run both containers to make mongo db container available for our application
 
@@ -16,7 +23,9 @@
 ![App Screenshot](https://github.com/Anup-Narkhede/Docker-Project-Mongo-Node-AWS-ECR-/blob/master/docker-network.png)
      
  ### 1. Create Docker Network
- ```docker network create mongo-network```
+ ```
+ docker network create mongo-network
+ ```
  
  #### Run mongo container from mongo image
  ```
@@ -47,7 +56,13 @@ mongo
 mongo-express 
  ```
 #### list currently running containers
-```docker ps```
+```
+docker ps
+```
+#### list all containers (stopped/running)
+```
+docker ps -a
+```
 
 ### 2. Docker Compose:
 
@@ -56,16 +71,23 @@ mongo-express
 ![App Screenshot](https://github.com/Anup-Narkhede/Docker-Project-Mongo-Node-AWS-ECR-/blob/master/yaml2.png)
 
 #### Running yaml file:
-```docker-compose -f mongo-docker-compose.yaml up -d```
+```
+docker-compose -f mongo-docker-compose.yaml up -d
+```
 
-##### docker-compose <file> <filename> up <detached-mode>
+```docker-compose <file> <filename> up <detached-mode>```
 
   
 #### Stopping & removing container:
-```docker-compose -f mongo-docker-compose.yaml down -d```
+       
+```
+docker-compose -f mongo-docker-compose.yaml down -d
+```
+
 Note: docker-compose down also removes automatically created docker network
 
 DOCKER-COMPOSE YAML CODE
+
 ```js
 version: '3'
 services:
