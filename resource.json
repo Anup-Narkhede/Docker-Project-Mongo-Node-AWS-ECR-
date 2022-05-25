@@ -1,5 +1,4 @@
 {
-  "AWSTemplateFormatVersion": "2010-09-09T00:00:00.000Z",
   "Description": "Basic EC2 Instance.",
   "Resources": {
     "DevEC2Instance": {
