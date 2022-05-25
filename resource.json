@@ -1,16 +1,16 @@
 {
-  "Description": "Basic EC2 Instance.",
-  "Resources": {
-    "DevEC2Instance": {
-      "Type": "AWS::EC2::Instance",
-      "Properties": {
-        "ImageId": "ami-079b5e5b3971bd10d",
-        "InstanceType": "t2.micro",
-        "KeyName": "cfn-key-1",
-        "SecurityGroups": [
-          "default"
-        ]
-      }
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "S3Bucket": {
+            "Type": "AWS::S3::Bucket"
+        }
+    },
+    "Outputs": {
+        "BucketName": {
+            "Value": {
+                "Ref": "S3Bucket"
+            },
+            "Description": "Name of the sample Amazon S3 bucket."
+        }
     }
-  }
 }
